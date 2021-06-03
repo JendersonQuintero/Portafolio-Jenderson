@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    border: solid 2px red;
+    width: 100%;
+    display: flex;
+}
+
+body {
+    background-color: rgb(66, 66, 66);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+#inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* -----------------INICIO DEL NAVBAR------------------ */
+.navbar {
+    background: #2b2b2b;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 7vh;
+    color: white;
+    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.719);
+}
+
+.navbar-opciones {
+    border: solid 2px red; /* TESTEOS */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+
+.navbar-opciones span {
+    padding-right: 0.5vw;
+}
+
+.navbar-opciones li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-inline: 2vw;
+    padding-inline: 0.3vw;
+    padding-bottom: 0.3vw;
+    cursor: pointer;
+}
+
+.navbar-opciones li:hover {
+    border-bottom: solid 2px aqua;
+}
+
+.navbar-opciones li a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-menu {
+    position: fixed;
+    left: 93%;
+    cursor: pointer;
+    display: none;
+}
+
+.btn-menu:hover {
+    color: aqua; /*Esperando cambio de color...*/
+}
+/* -----------------FIN DEL NAVBAR------------------ */
+
+/* -----------------INICIO DEL HERO------------------ */
+.hero {
+    border: solid 2px red; /* TESTEOS */
+    width: 100%;
+    height: 50vh;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    border: solid 2px red; /*TESTEOS*/
+    width: 30%;
+}
+
+.words {
+    border: solid 2px red; /*TESTEOS*/
+    width: 40%;
+}
+/* -----------------FIN DEL HERO------------------ */
+
+
+/* -----------------INICIO DE SOBRE MI------------------ */
+#sobre-mi {
+    height: 60vh;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+/* -----------------FIN DE SOBRE MI------------------ */
+
+
+/* -----------------INICIO DE MIS PROYECTOS------------------ */
+#proyectos {
+    height: 80vh;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+/* -----------------FIN DE MIS PROYECTOS------------------ */
+
+
+/* -----------------INICIO DE HABILIDADES------------------ */
+#habilidades {
+    height: 80vh;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+/* -----------------FIN DE MIS HABILIDADES------------------ */
+
+
+/* -----------------INICIO DE PASATIEMPOS------------------ */
+#pasatiempos {
+    height: 80vh;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+/* -----------------FIN DE MIS PASATIEMPOS------------------ */
+
+
+/* -----------------INICIO DE CONTACTAME------------------ */
+#contactame {
+    height: 40vh;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+/* -----------------FIN DE MIS CONTACTAME------------------ */
+
+
+/* -----------------INICIO DEL FOOTER------------------ */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 7vh;
+}
+
+.subir {
+    color: white;
+}
+
+.subir:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+/* -----------------FIN DEL FOOTER------------------ */
+
+/* -----------------MediaQueris para tablets y telefonos------------------ */
+@media screen and (max-width: 1024px) {
+    .btn-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 952px) and (min-width: 700px) {
+    .navbar-opciones {
+        position: fixed;
+        font-size: 25px;
+        width: 100%;
+        height: 95vh;
+        top: 7%;
+        right: -100%;
+        background: rgba(0, 0, 0, 0.856);
+        backdrop-filter: blur(2px);
+        flex-direction: column;
+        align-items: center;
+        transition: ease all 0.4s;
+    }
+
+    .navbar-opciones.active {
+        right: 0;
+    }
+
+    .navbar-opciones li {
+        margin-bottom: 7vh;
+        padding-bottom: 1vh;
+    }
+
+    .navbar-opciones span {
+        padding-right: 2vw;
+    }
+    
+    .btn-menu {
+        display: block;
+        left: 90%;
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .navbar-opciones {
+        position: fixed;
+        width: 100%;
+        height: 95vh;
+        top: 7%;
+        right: -100%;
+        background: rgba(0, 0, 0, 0.856);
+        backdrop-filter: blur(2px);
+        flex-direction: column;
+        align-items: center;
+        transition: ease all 0.4s;
+    }
+
+    .navbar-opciones.active {
+        right: 0;
+    }
+
+    .navbar-opciones li {
+        margin-bottom: 7vh;
+    }
+
+    .navbar-opciones span {
+        padding-right: 2vw;
+    }
+    
+    .btn-menu {
+        display: block;
+        left: 90%;
+    }
+
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logo {
+        text-align: center;
+        font-size: 15px;
+        width: 90%;
+        margin-bottom: 5vw;
+    }
+
+    .words {
+        font-size: 9px;
+        width: 80%;
+    }
+}
