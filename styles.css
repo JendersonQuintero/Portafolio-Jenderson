@@ -13,9 +13,15 @@ section {
 body {
     background-color: rgb(66, 66, 66);
     font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
 }
+
+.titulo {
+    font-size: 2vw;
+    color: white;
+    border-bottom: solid 0.3vw aqua;
+    padding-inline: 0.8%;
+    margin-bottom: 4vh;
+  }
 
 #inicio {
     display: flex;
@@ -26,6 +32,7 @@ body {
 /* -----------------INICIO DEL NAVBAR------------------ */
 .navbar {
     background: #2b2b2b;
+    bottom: 93%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -37,7 +44,6 @@ body {
 }
 
 .navbar-opciones {
-    border: solid 2px red; /* TESTEOS */
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -87,8 +93,105 @@ body {
 .hero {
     border: solid 2px red; /* TESTEOS */
     width: 100%;
-    height: 50vh;
+    height: 90vh;
     color: white;
+}
+
+.contenedor__slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    margin-left: -100%;
+}
+
+.slider__section {
+    width: 100%;
+}
+
+.slider__img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    border: solid 2px red; /*TESTEOS*/
+    width: 100%;
+    height: 92%;
+    background: rgba(0, 0, 0, 0.445);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 7%
+}
+/* -----------------FIN DEL HERO------------------ */
+
+
+/* -----------------INICIO DE SOBRE MI------------------ */
+#sobre-mi {
+    height: 40vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#sobre-mi .contenido {
+    border: solid 2px red; /*TESTEOS*/
+    background: #2b2b2b;
+    width: 90%;
+    height: 80%;
+    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.719);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#sobre-mi .contenido .texto {
+    width: 90%;
+    color: white;
+    font-size: 1.2vw;
+}
+
+/* -----------------FIN DE SOBRE MI------------------ */
+
+
+/* -----------------INICIO DE MIS PROYECTOS------------------ */
+#proyectos {
+    height: 80vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#proyectos .contenido {
+    border: solid 2px red; /*TESTEOS*/
+    background: #2b2b2b;
+    width: 90%;
+    height: 80%;
+    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.719);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#proyectos .contenido .mis-proyectos {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -96,47 +199,106 @@ body {
     align-items: center;
 }
 
-.logo {
-    border: solid 2px red; /*TESTEOS*/
-    width: 30%;
-}
 
-.words {
-    border: solid 2px red; /*TESTEOS*/
-    width: 40%;
-}
-/* -----------------FIN DEL HERO------------------ */
-
-
-/* -----------------INICIO DE SOBRE MI------------------ */
-#sobre-mi {
-    height: 60vh;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-around;
-}
-/* -----------------FIN DE SOBRE MI------------------ */
-
-
-/* -----------------INICIO DE MIS PROYECTOS------------------ */
-#proyectos {
-    height: 80vh;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-around;
-}
 /* -----------------FIN DE MIS PROYECTOS------------------ */
 
 
 /* -----------------INICIO DE HABILIDADES------------------ */
 #habilidades {
-    height: 80vh;
+    height: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-around;
+}
+
+#habilidades .contenido {
+    border: solid 2px red; /*TESTEOS*/
+    background: #2b2b2b;
+    width: 90%;
+    height: 80%;
+    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.719);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#habilidades .contenido .mis-habilidades {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.mis-habilidades .habilidad {
+    border: solid 0.12vw aqua;
+    margin: 1.7%;
+    width: 500px;
+    height: 400px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.699);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-align: center;
+    transition: transform .3s;
+    position: relative;
+    transform-style: preserve-3d;
+
+}
+
+.mis-habilidades .habilidad .adelante,
+.mis-habilidades .habilidad .atras {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+}
+
+.mis-habilidades .habilidad .adelante img {
+    width: 100%;
+    height: 85%;
+}
+
+.mis-habilidades .habilidad .adelante p {
+    width: 100%;
+    height: 15%;
+    font-size: 1.4vw;
+    font-weight: bold;
+    line-height: 5.5vh;
+}
+
+.mis-habilidades .habilidad .atras {
+    transform: rotateY(180deg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: whitesmoke;
+}
+
+.mis-habilidades .habilidad .atras p {
+    padding: 2%;
+    font-size: 1.2vw;
+}
+
+.mis-habilidades .habilidad:hover {
+    box-shadow: 13px 13px 6px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    transition: transform .7s;
+}
+
+.mis-habilidades .habilidad:active {
+    transform: rotateY(180deg);
+    box-shadow: -13px 13px 6px rgba(0, 0, 0, 0.5);
 }
 /* -----------------FIN DE MIS HABILIDADES------------------ */
 
@@ -174,6 +336,10 @@ footer {
     height: 7vh;
 }
 
+footer span {
+    font-weight: bold;
+}
+
 .subir {
     color: white;
 }
@@ -192,8 +358,14 @@ footer {
 }
 
 @media screen and (max-width: 952px) and (min-width: 700px) {
+    .navbar {
+        position: fixed;
+        z-index: 1;
+    }
+
     .navbar-opciones {
         position: fixed;
+        z-index: 1;
         font-size: 25px;
         width: 100%;
         height: 95vh;
@@ -221,6 +393,7 @@ footer {
     
     .btn-menu {
         display: block;
+        z-index: 1;
         left: 90%;
         font-size: 25px;
     }
@@ -228,8 +401,20 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
+    .navbar {
+        position: fixed;
+        z-index: 1;
+    }
+
+    .titulo {
+        font-size: 22px;
+        border-bottom: solid 2px aqua;
+    }
+    
     .navbar-opciones {
         position: fixed;
+        z-index: 1;
+        font-size: 25px;
         width: 100%;
         height: 95vh;
         top: 7%;
@@ -254,8 +439,9 @@ footer {
     }
     
     .btn-menu {
-        display: block;
+        display: none;
         left: 90%;
+        z-index: 1;
     }
 
     .hero {
@@ -270,8 +456,8 @@ footer {
         margin-bottom: 5vw;
     }
 
-    .words {
-        font-size: 9px;
-        width: 80%;
+    .mis-proyectos .proyecto {
+        width: 250px;
+        height: 150px;
     }
 }
