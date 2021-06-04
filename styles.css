@@ -303,25 +303,77 @@ body {
 /* -----------------FIN DE MIS HABILIDADES------------------ */
 
 
-/* -----------------INICIO DE PASATIEMPOS------------------ */
-#pasatiempos {
-    height: 80vh;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-around;
-}
-/* -----------------FIN DE MIS PASATIEMPOS------------------ */
-
-
 /* -----------------INICIO DE CONTACTAME------------------ */
 #contactame {
-    height: 40vh;
+    height: 50vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactame form {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+}
+
+#contactame form .input-ico {
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-around;
+    background: white;
+    margin-bottom: 2vh;
+    width: 60%;
+    height: 3vh;
+    border: 0.12vw solid #aaa;
+    border-radius: 5px;
 }
+
+.input-ico span {
+    padding-inline: 1%;
+}
+
+.input-ico i {
+    width: 10%;
+    color: #aaa;
+}
+
+.input-ico input {
+    border: none;
+    outline: none;
+    padding-inline: 1%;
+    width: 80%;
+    height: 100%;
+    cursor: auto;
+    font-size: 15px;
+    color: black;
+}
+
+#contactame form textarea {
+    width: 60%;
+    height: 10vh;
+    border: 0.12vw solid #aaa;
+    border-radius: 5px;
+    resize: none;
+    padding: 0.5% 1%;
+    font-size: 15px;
+}
+
+#contactame form button {
+    width: 100px;
+    height: 30px;
+    margin: 2% 0;
+    border-radius: 6px;
+    background: rgb(0, 230, 230);
+}
+
+#contactame form button:hover {
+    background: rgb(1, 255, 255);
+}
+
 /* -----------------FIN DE MIS CONTACTAME------------------ */
 
 
@@ -330,6 +382,8 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    background: #2b2b2b;
+    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.719);
     align-items: center;
     color: white;
     width: 100%;
