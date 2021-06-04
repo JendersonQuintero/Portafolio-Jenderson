@@ -5,7 +5,6 @@
 }
 
 section {
-    border: solid 2px red;
     width: 100%;
     display: flex;
 }
@@ -91,7 +90,6 @@ body {
 
 /* -----------------INICIO DEL HERO------------------ */
 .hero {
-    border: solid 2px red; /* TESTEOS */
     width: 100%;
     height: 90vh;
     color: white;
@@ -123,7 +121,6 @@ body {
 }
 
 .logo {
-    border: solid 2px red; /*TESTEOS*/
     width: 100%;
     height: 92%;
     background: rgba(0, 0, 0, 0.445);
@@ -135,11 +132,28 @@ body {
     position: absolute;
     top: 7%
 }
+
+.logo h1 {
+    color: aqua;
+    font-size: 90px;
+    text-shadow: 3px 3px 4px black;
+    margin-bottom: 1%;
+}
+
+.logo p {
+    font-size: 30px;
+    text-shadow: 3px 3px 4px black;
+}
+
+.logo span:hover {
+    color: rgb(1, 165, 1);
+}
 /* -----------------FIN DEL HERO------------------ */
 
 
 /* -----------------INICIO DE SOBRE MI------------------ */
 #sobre-mi {
+    margin-top: 2%;
     height: 40vh;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -148,7 +162,6 @@ body {
 }
 
 #sobre-mi .contenido {
-    border: solid 2px red; /*TESTEOS*/
     background: #2b2b2b;
     width: 90%;
     height: 80%;
@@ -179,7 +192,6 @@ body {
 }
 
 #proyectos .contenido {
-    border: solid 2px red; /*TESTEOS*/
     background: #2b2b2b;
     width: 90%;
     height: 80%;
@@ -213,7 +225,6 @@ body {
 }
 
 #habilidades .contenido {
-    border: solid 2px red; /*TESTEOS*/
     background: #2b2b2b;
     width: 90%;
     height: 80%;
@@ -400,6 +411,7 @@ footer span {
 
 .subir:hover {
     cursor: pointer;
+    color: aqua;
     transform: scale(1.2);
 }
 /* -----------------FIN DEL FOOTER------------------ */
