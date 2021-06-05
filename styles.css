@@ -17,6 +17,7 @@ body {
 .titulo {
     font-size: 2vw;
     color: white;
+    text-shadow: .2px .2px 5px aqua;
     border-bottom: solid 0.3vw aqua;
     padding-inline: 0.8%;
     margin-bottom: 4vh;
@@ -91,7 +92,7 @@ body {
 /* -----------------INICIO DEL HERO------------------ */
 .hero {
     width: 100%;
-    height: 90vh;
+    height: 93vh;
     color: white;
 }
 
@@ -122,7 +123,7 @@ body {
 
 .logo {
     width: 100%;
-    height: 92%;
+    height: 93%;
     background: rgba(0, 0, 0, 0.445);
     display: flex;
     flex-direction: column;
@@ -165,6 +166,7 @@ body {
     background: #2b2b2b;
     width: 90%;
     height: 80%;
+    border-radius: 10px;
     box-shadow: 0 2px 15px rgba(255, 255, 255, 0.719);
     display: flex;
     flex-direction: column;
@@ -176,43 +178,11 @@ body {
 
 #sobre-mi .contenido .texto {
     width: 90%;
-    color: white;
-    font-size: 1.2vw;
+    color: rgb(211, 211, 211);
+    font-size: 22px;
 }
 
 /* -----------------FIN DE SOBRE MI------------------ */
-
-
-/* -----------------INICIO DE MIS PROYECTOS------------------ */
-#proyectos {
-    height: 80vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#proyectos .contenido {
-    background: #2b2b2b;
-    width: 90%;
-    height: 80%;
-    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.719);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-#proyectos .contenido .mis-proyectos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
-/* -----------------FIN DE MIS PROYECTOS------------------ */
 
 
 /* -----------------INICIO DE HABILIDADES------------------ */
@@ -224,10 +194,15 @@ body {
     justify-content: space-around;
 }
 
+#habilidades .titulo {
+    margin-top: 4%;
+}
+
 #habilidades .contenido {
     background: #2b2b2b;
     width: 90%;
     height: 80%;
+    border-radius: 10px;
     box-shadow: 0 2px 15px rgba(255, 255, 255, 0.719);
     display: flex;
     flex-direction: column;
@@ -247,9 +222,10 @@ body {
 
 .mis-habilidades .habilidad {
     border: solid 0.12vw aqua;
+    cursor: pointer;
     margin: 1.7%;
-    width: 500px;
-    height: 400px;
+    width: 250px;
+    height: 250px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.699);
     display: flex;
     flex-direction: column;
@@ -281,9 +257,9 @@ body {
 .mis-habilidades .habilidad .adelante p {
     width: 100%;
     height: 15%;
-    font-size: 1.4vw;
+    font-size: 20px;
+    color: white;
     font-weight: bold;
-    line-height: 5.5vh;
 }
 
 .mis-habilidades .habilidad .atras {
@@ -313,6 +289,37 @@ body {
 }
 /* -----------------FIN DE MIS HABILIDADES------------------ */
 
+/* -----------------INICIO DE MIS PROYECTOS------------------ */
+#proyectos {
+    height: 80vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#proyectos .contenido {
+    background: #2b2b2b;
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.719);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#proyectos .contenido .mis-proyectos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* -----------------FIN DE MIS PROYECTOS------------------ */
 
 /* -----------------INICIO DE CONTACTAME------------------ */
 #contactame {
