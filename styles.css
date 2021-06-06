@@ -1,6 +1,6 @@
 :root {
     --color-contenido: #1b1b1b;
-    --color-background: rgb(34, 34, 34);
+    --color-background: rgb(48, 48, 48);
 }
 
 * {
@@ -12,6 +12,7 @@
 section {
     width: 100%;
     display: flex;
+    margin-bottom: 4%;
 }
 
 body {
@@ -93,8 +94,8 @@ body {
     cursor: pointer;
     display: none;
 }
-
 /* -----------------FIN DEL NAVBAR------------------ */
+
 
 /* -----------------INICIO DEL HERO------------------ */
 .hero {
@@ -109,7 +110,6 @@ body {
     overflow: hidden;
     position: relative;
 }
-
 
 .slider {
     display: flex;
@@ -175,8 +175,8 @@ body {
     width: 90%;
     height: 80%;
     border-radius: 10px;
-    border: solid 0.05vw white;
-    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.719);
+    /* border: solid 0.05vw white;
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.719); */
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -199,14 +199,12 @@ body {
     height:  400px;
 }
 
-
 #sobre-mi .contenido .contenedor .texto {
     width: 50%;
     color: white;
     font-size: 22px;
     text-align: left;
 }
-
 /* -----------------FIN DE SOBRE MI------------------ */
 
 
@@ -229,8 +227,8 @@ body {
     height: 80%;
     border-radius: 10px;
     padding: 2% 0;
-    border: solid 0.05vw white;
-    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.719);
+    /* border: solid 0.05vw white;
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.719); */
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -285,12 +283,11 @@ body {
     font-weight: bold;
 }
 
-
 .mis-habilidades .habilidad:hover {
     box-shadow: 0 2px 30px rgba(255, 255, 255, 0.719);
 }
-
 /* -----------------FIN DE MIS HABILIDADES------------------ */
+
 
 /* -----------------INICIO DE MIS PROYECTOS------------------ */
 #proyectos {
@@ -303,10 +300,10 @@ body {
 #proyectos .contenido {
     background: var(--color-contenido);
     width: 90%;
-    height: 80%;
+    height: 100%;
     border-radius: 10px;
-    border: solid 0.05vw white;
-    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.719);
+    /* border: solid 0.05vw white;
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.719); */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -323,8 +320,29 @@ body {
     width: 100%;
 }
 
+.mis-proyectos .proyecto {
+    border: solid 0.05vw rgb(70, 70, 70);
+    background: rgb(243, 243, 243);
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 1.7%;
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-align: center;
+}
 
+.mis-proyectos .proyecto img {
+    width: 100%;
+    height: 85%;
+    object-fit: contain;
+    border-radius: 10px;
+}
 /* -----------------FIN DE MIS PROYECTOS------------------ */
+
 
 /* -----------------INICIO DE CONTACTAME------------------ */
 #contactame {
@@ -338,23 +356,60 @@ body {
 #contactame .contenido {
     background: var(--color-contenido);
     width: 90%;
-    height: 80%;
+    height: 100%;
     border-radius: 10px;
     padding: 2% 0;
-    border: solid 0.05vw white;
-    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.719);
+    /* border: solid 0.05vw white;
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.719); */
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+#contactame .contenido .contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#contactame .contenido .contenedor .datos-contacto {
+    width: 40%;
+    height: 100%;
+}
+
+.datos-contacto h3 {
+    color:white;
+    margin-bottom: 1%;
+}
+
+.datos-contacto p {
+    color:white;
+    padding-left: 4%;
+    margin-bottom: 0.7%;
+}
+
+.datos-contacto span {
+    font-weight: bold;
+}
+
+.datos-contacto .telefonos {
+    margin-top: 4%;
+}
+
+.datos-contacto .correos {
+    margin-top: 4%;
 }
 
 #contactame form {
     display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 80%;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
 }
 
 #contactame form .input-ico {
