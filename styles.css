@@ -1,3 +1,8 @@
+:root {
+    --color-contenido: #1b1b1b;
+    --color-background: rgb(34, 34, 34);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,14 +15,13 @@ section {
 }
 
 body {
-    background-color: rgb(66, 66, 66);
+    background-color: var(--color-background);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .titulo {
-    font-size: 2vw;
+    font-size: 2.2vw;
     color: white;
-    text-shadow: .2px .2px 5px aqua;
     border-bottom: solid 0.3vw aqua;
     padding-inline: 0.8%;
     margin-bottom: 4vh;
@@ -29,9 +33,11 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 /* -----------------INICIO DEL NAVBAR------------------ */
 .navbar {
-    background: #2b2b2b;
+    background: var(--color-contenido);
+    z-index: 1;
     bottom: 93%;
     display: flex;
     flex-direction: row;
@@ -41,6 +47,10 @@ body {
     height: 7vh;
     color: white;
     box-shadow: 0 2px 15px rgba(255, 255, 255, 0.719);
+}
+
+.navbar .nombre {
+    display: none;
 }
 
 .navbar-opciones {
@@ -64,7 +74,7 @@ body {
     flex-wrap: nowrap;
     margin-inline: 2vw;
     padding-inline: 0.3vw;
-    padding-bottom: 0.3vw;
+    padding-bottom: 0.5vw;
     cursor: pointer;
 }
 
@@ -84,9 +94,6 @@ body {
     display: none;
 }
 
-.btn-menu:hover {
-    color: aqua; /*Esperando cambio de color...*/
-}
 /* -----------------FIN DEL NAVBAR------------------ */
 
 /* -----------------INICIO DEL HERO------------------ */
@@ -102,6 +109,7 @@ body {
     overflow: hidden;
     position: relative;
 }
+
 
 .slider {
     display: flex;
@@ -135,18 +143,18 @@ body {
 }
 
 .logo h1 {
-    color: aqua;
+    color: white;
     font-size: 90px;
     text-shadow: 3px 3px 4px black;
     margin-bottom: 1%;
 }
 
 .logo p {
-    font-size: 30px;
+    font-size: 27px;
     text-shadow: 3px 3px 4px black;
 }
 
-.logo span:hover {
+.logo span {
     color: rgb(1, 165, 1);
 }
 /* -----------------FIN DEL HERO------------------ */
@@ -155,7 +163,7 @@ body {
 /* -----------------INICIO DE SOBRE MI------------------ */
 #sobre-mi {
     margin-top: 2%;
-    height: 40vh;
+    height: 80vh;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
@@ -163,11 +171,12 @@ body {
 }
 
 #sobre-mi .contenido {
-    background: #2b2b2b;
+    background: var(--color-contenido);
     width: 90%;
     height: 80%;
     border-radius: 10px;
-    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.719);
+    border: solid 0.05vw white;
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.719);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -175,11 +184,27 @@ body {
     align-items: center;
 }
 
+#sobre-mi .contenido .contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
 
-#sobre-mi .contenido .texto {
-    width: 90%;
-    color: rgb(211, 211, 211);
+#sobre-mi .contenido .contenedor .img-jenderson {
+    border: solid 1px aqua;
+    width: 400px;
+    height:  400px;
+}
+
+
+#sobre-mi .contenido .contenedor .texto {
+    width: 50%;
+    color: white;
     font-size: 22px;
+    text-align: left;
 }
 
 /* -----------------FIN DE SOBRE MI------------------ */
@@ -195,19 +220,21 @@ body {
 }
 
 #habilidades .titulo {
-    margin-top: 4%;
+    margin-top: 1%;
 }
 
 #habilidades .contenido {
-    background: #2b2b2b;
+    background: var(--color-contenido);
     width: 90%;
     height: 80%;
     border-radius: 10px;
-    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.719);
+    padding: 2% 0;
+    border: solid 0.05vw white;
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.719);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -221,72 +248,48 @@ body {
 }
 
 .mis-habilidades .habilidad {
-    border: solid 0.12vw aqua;
+    border: solid 0.05vw rgb(70, 70, 70);
+    background: rgb(243, 243, 243);
+    border-radius: 10px;
     cursor: pointer;
     margin: 1.7%;
     width: 250px;
     height: 250px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.699);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
     text-align: center;
-    transition: transform .3s;
-    position: relative;
-    transform-style: preserve-3d;
 
 }
 
-.mis-habilidades .habilidad .adelante,
-.mis-habilidades .habilidad .atras {
+.mis-habilidades .habilidad .adelante {
     width: 100%;
     height: 100%;
-    position: absolute;
     top: 0;
     left: 0;
-    backface-visibility: hidden;
-    -o-backface-visibility: hidden;
 }
 
 .mis-habilidades .habilidad .adelante img {
     width: 100%;
     height: 85%;
+    object-fit: contain;
+    border-radius: 10px;
 }
 
 .mis-habilidades .habilidad .adelante p {
     width: 100%;
     height: 15%;
     font-size: 20px;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 
-.mis-habilidades .habilidad .atras {
-    transform: rotateY(180deg);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: whitesmoke;
-}
-
-.mis-habilidades .habilidad .atras p {
-    padding: 2%;
-    font-size: 1.2vw;
-}
 
 .mis-habilidades .habilidad:hover {
-    box-shadow: 13px 13px 6px rgba(0, 0, 0, 0.5);
-    transform: scale(1.05);
-    transition: transform .7s;
+    box-shadow: 0 2px 30px rgba(255, 255, 255, 0.719);
 }
 
-.mis-habilidades .habilidad:active {
-    transform: rotateY(180deg);
-    box-shadow: -13px 13px 6px rgba(0, 0, 0, 0.5);
-}
 /* -----------------FIN DE MIS HABILIDADES------------------ */
 
 /* -----------------INICIO DE MIS PROYECTOS------------------ */
@@ -298,11 +301,12 @@ body {
 }
 
 #proyectos .contenido {
-    background: #2b2b2b;
+    background: var(--color-contenido);
     width: 90%;
     height: 80%;
     border-radius: 10px;
-    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.719);
+    border: solid 0.05vw white;
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.719);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -316,6 +320,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 
 
@@ -323,11 +328,26 @@ body {
 
 /* -----------------INICIO DE CONTACTAME------------------ */
 #contactame {
-    height: 50vh;
+    height: 60vh;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+}
+
+#contactame .contenido {
+    background: var(--color-contenido);
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    padding: 2% 0;
+    border: solid 0.05vw white;
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.719);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #contactame form {
@@ -378,18 +398,21 @@ body {
     resize: none;
     padding: 0.5% 1%;
     font-size: 15px;
+    outline: none;
 }
 
 #contactame form button {
     width: 100px;
     height: 30px;
     margin: 2% 0;
+    border: none;
     border-radius: 6px;
     background: rgb(0, 230, 230);
 }
 
 #contactame form button:hover {
-    background: rgb(1, 255, 255);
+    background: rgb(0, 155, 155);
+    font-weight: bold;
 }
 
 /* -----------------FIN DE MIS CONTACTAME------------------ */

@@ -17,14 +17,14 @@ slider.insertAdjacentElement('afterbegin', sliderSectionLast);
 function next() {
     let sliderSectionFirts = document.querySelectorAll('.slider__section')[0];
     slider.style.marginLeft = '-200%';
-    slider.style.transition = 'all 0.5s';
+    slider.style.transition = 'ease all 1.5s';
     setTimeout(function(){
-        slider.style.transition = 'none';
         slider.insertAdjacentElement('beforeend', sliderSectionFirts);
+        slider.style.transition = 'none';
         slider.style.marginLeft = '-100%';
-    }, 500);
+    }, 2000);
 }
 
 setInterval(function() {
     next()
-}, 4000)
+}, 10000)
