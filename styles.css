@@ -490,25 +490,46 @@ body {
 
 .datos-contacto h3 {
     color:white;
-    margin-bottom: 1%;
+    margin-bottom: 1.5%;
+}
+
+.datos-contacto span {
+    margin-right: 2%;
 }
 
 .datos-contacto p {
     color:white;
-    padding-left: 4%;
+    padding-left: 10%;
     margin-bottom: 0.7%;
 }
 
-.datos-contacto span {
-    font-weight: bold;
-}
-
-.datos-contacto .telefonos {
+.datos-contacto .telefonos,
+.datos-contacto .correos,
+.datos-contacto .redes {
     margin-top: 4%;
 }
 
-.datos-contacto .correos {
-    margin-top: 4%;
+.datos-contacto .redes .iconos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin-top: 3%;
+    padding-left: 4%;
+}
+
+.datos-contacto .redes .icono {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.datos-contacto .redes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #contactame form {
