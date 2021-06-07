@@ -23,7 +23,7 @@ body {
 .titulo {
     font-size: 2.2vw;
     color: white;
-    border-bottom: solid 0.3vw aqua;
+    border-bottom: solid 0.3vw rgb(1, 165, 1);
     padding-inline: 0.8%;
     margin-bottom: 4vh;
 }
@@ -40,6 +40,7 @@ body {
     background: var(--color-contenido);
     z-index: 1;
     bottom: 93%;
+    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -80,7 +81,7 @@ body {
 }
 
 .navbar-opciones li:hover {
-    border-bottom: solid 2px aqua;
+    border-bottom: solid 2px rgb(1, 165, 1);
 }
 
 .navbar-opciones li a {
@@ -102,6 +103,7 @@ body {
     width: 100%;
     height: 93vh;
     color: white;
+    margin-top: 7vh;
 }
 
 .contenedor__slider {
@@ -132,7 +134,7 @@ body {
 .logo {
     width: 100%;
     height: 93%;
-    background: rgba(0, 0, 0, 0.445);
+    background: rgba(0, 0, 0, 0.555);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,9 +156,6 @@ body {
     text-shadow: 3px 3px 4px black;
 }
 
-.logo span {
-    color: rgb(1, 165, 1);
-}
 /* -----------------FIN DEL HERO------------------ */
 
 
@@ -244,6 +243,48 @@ body {
     align-items: center;
     width: 100%;
 }
+
+.mis-habilidades .lista-habilidades {
+    border: solid 1px red;
+    list-style: none;
+    width: 100%;
+    height: 60vh;
+}
+
+.lista-habilidades li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista-habilidades span {
+    width: 50px;
+    height: 50px;
+}
+
+.lista-habilidades img {
+    width: 100%;
+    height: 100%;
+}
+
+.lista-habilidades p {
+
+}
+
+.lista-habilidades .barra-habilidad {
+    border: solid 1 px blue;
+    width: 50px;
+    height: 10px;
+}
+
+.barra-habilidad .carga {
+    width: 100%;
+    height: 40%;
+    background: blue;
+}
+
 
 .mis-habilidades .habilidad {
     border: solid 0.05vw rgb(70, 70, 70);
@@ -420,7 +461,7 @@ body {
     background: white;
     margin-bottom: 2vh;
     width: 60%;
-    height: 3vh;
+    height: 4.5vh;
     border: 0.12vw solid #aaa;
     border-radius: 5px;
 }
@@ -462,11 +503,11 @@ body {
     margin: 2% 0;
     border: none;
     border-radius: 6px;
-    background: rgb(0, 230, 230);
+    background: rgb(1, 165, 1);
 }
 
 #contactame form button:hover {
-    background: rgb(0, 155, 155);
+    background: rgb(1, 104, 1);
     font-weight: bold;
 }
 
@@ -478,7 +519,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background: #2b2b2b;
+    background: var(--color-contenido);
     box-shadow: 0 2px 15px rgba(255, 255, 255, 0.719);
     align-items: center;
     color: white;
