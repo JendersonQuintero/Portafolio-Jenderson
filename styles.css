@@ -2,6 +2,10 @@
     --color-contenido: #1b1b1b;
     --color-background: rgb(48, 48, 48);
     --color-resaltado: rgb(1, 165, 1);
+    --color-titulo: white;
+    --color-parrafos: white;
+    --sombra: 0 2px 15px rgba(255, 255, 255, 0.719);
+    --sombra-hover: 0 2px 20px rgba(255, 255, 255, 0.808);
 }
 
 * {
@@ -33,10 +37,20 @@ body {
 
 .titulo {
     font-size: 2.2vw;
-    color: white;
+    color: var(--color-titulo);
     border-bottom: solid 0.3vw var(--color-resaltado);
     padding-inline: 0.8%;
     margin-bottom: 4vh;
+}
+
+.popup__title {
+    color: var(--color-titulo);
+    font-size: 2vw;
+}
+
+.popup__text {
+    color: var(--color-parrafos);
+    font-size: 0.9vw;
 }
 
 #inicio {
@@ -58,7 +72,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 7vh;
-    color: white;
+    color: var(--sombra);
     box-shadow: 0 2px 15px rgba(255, 255, 255, 0.719);
 }
 
@@ -86,8 +100,6 @@ body {
     justify-content: center;
     flex-wrap: nowrap;
     margin-inline: 2vw;
-    padding-inline: 0.3vw;
-    padding-bottom: 0.5vw;
     cursor: pointer;
 }
 
@@ -97,7 +109,8 @@ body {
 
 .navbar-opciones li a {
     text-decoration: none;
-    color: white;
+    padding: 0 0.3vw 0.5vw 0.3vw;
+    color: var(--color-parrafos);
 }
 
 .btn-menu {
@@ -113,7 +126,6 @@ body {
 .hero {
     width: 100%;
     height: 93vh;
-    color: white;
     margin-top: 7vh;
 }
 
@@ -156,13 +168,14 @@ body {
 }
 
 .logo h1 {
-    color: white;
+    color: var(--color-titulo);
     font-size: 90px;
     text-shadow: 3px 3px 4px black;
     margin-bottom: 1%;
 }
 
 .logo p {
+    color: var(--color-parrafos);
     font-size: 27px;
     text-shadow: 3px 3px 4px black;
 }
@@ -211,7 +224,7 @@ body {
 
 #sobre-mi .contenido .contenedor .texto {
     width: 50%;
-    color: white;
+    color: var(--color-parrafos);
     font-size: 22px;
     text-align: left;
 }
@@ -264,11 +277,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    
 }
 
 .contenedor-lista h2 {
-    color: white;
+    color: var(--color-titulo);
     height: 15%;
     width: 100%;
     text-align: center;
@@ -295,7 +307,6 @@ body {
     background: var(--color-contenido);
     border-radius: 5px;
 }
-
 
 .lista-habilidades li {
     display: flex;
@@ -329,7 +340,7 @@ body {
 .barra-habilidad p {
     text-align: center;
     padding-top: 3px;
-    color: white;
+    color: var(--color-parrafos);
     font-weight: bold;
     height: 100%;
     width: 100%;
@@ -424,7 +435,7 @@ body {
 }
 
 .mis-proyectos .proyecto {
-    background: rgb(243, 243, 243);
+    background: var(--color-background);
     border-radius: 10px;
     cursor: pointer;
     margin: 1.7%;
@@ -435,20 +446,34 @@ body {
     flex-wrap: nowrap;
     align-items: center;
     text-align: center;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.mis-proyectos .proyecto:hover {
+    box-shadow: var(--sombra-hover);
 }
 
 .mis-proyectos .proyecto img {
     width: 100%;
-    height: 85%;
-    object-fit: contain;
-    border-radius: 10px;
+    height: 75%;
+    object-fit: fill;
 }
 
 .mis-proyectos .proyecto .informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--color-parrafos);
     width: 100%;
-    height: 40%;
-    border-radius: 10px;
+    height: 30%;
     background: var(--color-background);
+}
+
+.informacion a {
+    color: var(--color-parrafos);
+
 }
 /* -----------------FIN DE MIS PROYECTOS------------------ */
 
@@ -468,8 +493,6 @@ body {
     height: 100%;
     border-radius: 10px;
     padding: 2% 0;
-    /* border: solid 0.05vw white;
-    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.719); */
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -492,7 +515,7 @@ body {
 }
 
 .datos-contacto h3 {
-    color:white;
+    color: var(--color-titulo);
     margin-bottom: 1.5%;
 }
 
@@ -501,7 +524,7 @@ body {
 }
 
 .datos-contacto p {
-    color:white;
+    color:var(--color-parrafos);
     padding-left: 10%;
     margin-bottom: 0.9%;
 }
@@ -527,32 +550,63 @@ body {
     width: 60px;
     height: 60px;
     cursor: pointer;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+}
+
+.datos-contacto .redes .icono:hover {
+    box-shadow: var(--sombra-hover);
 }
 
 .datos-contacto .redes img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
-#contactame form {
+#contactame .formulario {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 50%;
 }
 
-#contactame form .input-ico {
+#contactame .formulario .input-ico {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: center;
     background: white;
     margin-bottom: 2vh;
     width: 60%;
     height: 4.5vh;
-    border: 0.12vw solid #aaa;
+    border: 0.2vw solid var(--color-background);
     border-radius: 5px;
+    transition: ease all 0.3s;
+}
+
+#contactame .formulario .input-ico:focus-within {
+    border: 0.2vw solid var(--color-resaltado);
+}
+
+#contactame .formulario .valido {
+    border: 0.2vw solid var(--color-resaltado);
+}
+
+#contactame .formulario .invalido {
+    border: 0.2vw solid red;
+}
+
+.input-ico input {
+    border: none;
+    outline: none;
+    padding-inline: 1%;
+    width: 85%;
+    height: 100%;
+    cursor: auto;
+    font-size: 15px;
+    color: black;
 }
 
 .input-ico span {
@@ -564,38 +618,47 @@ body {
     color: #aaa;
 }
 
-.input-ico input {
-    border: none;
-    outline: none;
-    padding-inline: 1%;
-    width: 80%;
-    height: 100%;
-    cursor: auto;
-    font-size: 15px;
-    color: black;
+.input-ico .ico {
+    display: inline;
 }
 
-#contactame form textarea {
+.input-ico .fa-check {
+    color: var(--color-resaltado);
+    display: inline;
+}
+
+.input-ico .fa-times {
+    color: red;
+    display: inline;
+}
+
+#contactame .formulario textarea {
     width: 60%;
     height: 10vh;
-    border: 0.12vw solid #aaa;
+    border: 0.2vw solid var(--color-background);
     border-radius: 5px;
     resize: none;
     padding: 0.5% 1%;
     font-size: 15px;
     outline: none;
+    transition: ease all .3s;
 }
 
-#contactame form button {
+#contactame .formulario textarea:focus {
+    border: 0.2vw solid var(--color-resaltado);
+}
+
+#contactame .formulario button {
     width: 100px;
     height: 30px;
     margin: 2% 0;
     border: none;
     border-radius: 6px;
+    color: var(--color-parrafos);
     background: var(--color-resaltado);
 }
 
-#contactame form button:hover {
+#contactame .formulario button:hover {
     background: rgb(1, 104, 1);
     font-weight: bold;
 }

@@ -192,7 +192,7 @@
                                 <div class="carga office"></div>
                             </div>
                         </li>
-                        <li title="Inglés B1">
+                        <li title="Inglés A2">
                             <span>
                                 <img
                                 src="https://cdn.pixabay.com/photo/2018/05/27/14/26/union-jack-3433619_960_720.png"
@@ -215,12 +215,47 @@
             <div class="mis-proyectos">
                 <div class="proyecto" title="Adivinador de Animales">
                     <img
-                        src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png"
+                        src="assets/img/Adivinador de Animales.png"
                         alt="Proyecto adivinador de animales"
                     />
                     <div class="informacion">
-                        <p>Adivinador de Animales - Java</p>
-
+                        <p><strong>Proyecto: </strong>Adivinador de Animales</p>
+                        <p><strong>Desarrollado con: </strong>Java</p>
+                        <p><strong>GitHub: </strong><a href="https://github.com/JendersonQuintero/Adivinador-de-animales">Adivinador de animales</a></p>
+                    </div>
+                </div>
+                <div class="proyecto" title="Proyecto Arbol Binario AVL">
+                    <img
+                        src="http://3.bp.blogspot.com/-DImr05pGVpg/WTbFWyDjwbI/AAAAAAAADEM/MC21_tXastc4zlQEccElKklDL2LA612dACK4B/s1600/AVLCaso1Ex.png"
+                        alt="Arbol binario AVL"
+                    />
+                    <div class="informacion">
+                        <p><strong>Proyecto: </strong>Arbol Binario AVL</p>
+                        <p><strong>Desarrollado con: </strong>Java</p>
+                        <p><strong>GitHub: </strong><a href="https://github.com/JendersonQuintero/Arbol-Binario-AVL">Click aquí...</a></p>
+                    </div>
+                </div>
+                <div class="proyecto" title="Proyecto Asosiación de Vecinos">
+                    <img
+                        src="assets/img/Adivinador de Animales.png"
+                        alt="Buscador de personas"
+                    />
+                    <div class="informacion">
+                        <p><strong>Proyecto: </strong>Asociación de Vecinos</p>
+                        <p><strong>Desarrollado con: </strong>Java</p>
+                        <p><strong>GitHub: </strong><a href="https://github.com/JendersonQuintero/Asociaci-n-Vecinos">Click aquí...</a></p>
+                    </div>
+                </div>
+                <div class="proyecto" title="">
+                    <img
+                        src="assets/img/automotrizBGMQ.png"
+                        alt="Home page de AutomotrizBGMQ"
+                    />
+                    <div class="informacion">
+                        <p><strong>Proyecto: </strong>AutomotrizBGMQ</p>
+                        <p><strong>Desarrollado con: </strong>Angular y Firebase</p>
+                        <p><strong>Url: </strong><a href="https://automotrizbgmq.web.app">Click aquí...</a></p>
+                        <p><strong>GitHub: </strong><a href="https://github.com/nbolinaga/automotrizBGMQ/tree/Jenderson">Click aquí...</a></p>
                     </div>
                 </div>
             </div>
@@ -230,22 +265,28 @@
         <div class="contenido">
             <h2 class="titulo">Contactame</h2>
             <div class="contenedor">
-                <form name="contact" method="POST" data-netlify="true">
-                    <div class="input-ico">
+                <form name="contact" method="POST" data-netlify="true" class="formulario" id="formulario">
+                    
+                    <div class="input-ico" id="nombre" title="Ingrese su nombre. Solo se admiten letras">
                       <span><i class="fas fa-user"></i></span>
                       <input type="text" placeholder="Nombre" name="Nombre">
+                      <span><i class="fas ico" id="ico-nombre"></i></span>
                     </div>
         
-                    <div class="input-ico">
+                    <div class="input-ico" id="correo" title="Ingrese su correo. Ej: Jonhdoe@correo.com">
                       <span><i class="fas fa-at"></i></span>
-                      <input type="text" placeholder="Email" name="Correo">
+                      <input type="text" placeholder="Correo" name="Correo">
+                      <span><i class="fas ico" id="ico-correo"></i></span>
                     </div>
-                    <div class="input-ico">
+                    <div class="input-ico" id="asunto" title="Escriba el asunto del correo. Solo se admiten letras y números">
                       <span><i class="fas fa-envelope-open-text"></i></span>
                       <input type="text" placeholder="Asunto" name="Asunto">
+                      <span><i class="fas ico" id="ico-asunto"></i></span>
                     </div>
             
-                    <textarea placeholder="Escriba su mensaje aquí..." name="Mensaje"></textarea>
+                    <textarea placeholder="Escriba su mensaje aquí..." name="Mensaje"
+                    title="Escriba su mensaje aquí. Máximo 1000 carácteres."
+                    id="mensaje"></textarea>
                     <button type="submit">Registrar</button>
                 </form>
                 <aside class="datos-contacto">
@@ -264,21 +305,21 @@
                         <h3><span><i class="fas fa-share-alt"></i></span>Mis redes</h3>
                         <div class="iconos">
                             <span class="icono">
-                                <a href="#proyectos">
+                                <a href="https://www.facebook.com/jenderson.quintero" target="_blank">
                                     <img src="https://image.flaticon.com/icons/png/512/733/733547.png" 
                                     alt="Red Facebook"
                                     title="Mi cuenta en Facebook">
                                 </a>
                             </span>
                             <span class="icono">
-                                <a href="#proyectos">
+                                <a href="https://www.instagram.com/jendersonquintero/" target="_blank">
                                     <img src="https://image.flaticon.com/icons/png/512/2111/2111463.png" 
                                     alt="Red Instagram"
                                     title="Mi cuenta en Instagram">
                                 </a>
                             </span>
                             <span class="icono">
-                                <a href="#proyectos">
+                                <a href="https://github.com/JendersonQuintero" target="_blank">
                                     <img src="https://www.sferalabs.cc/wp-content/uploads/github-logo-white.png" 
                                     alt="Red GitHub"
                                     title="Mi cuenta en GitHub">
@@ -298,6 +339,7 @@
     <!-- Scripts de mi página web -->
     <script src="main.js"></script>
     <script src="https://kit.fontawesome.com/1d776de31d.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Scripts de mi página web -->
 </body>
 </html>
