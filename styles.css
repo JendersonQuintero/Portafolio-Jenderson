@@ -199,6 +199,7 @@ body {
     width: 90%;
     height: 80%;
     border-radius: 10px;
+    padding: 2.5% 5% 5% 5%;
     /* border: solid 0.05vw white;
     box-shadow: 0 2px 20px rgba(255, 255, 255, 0.719); */
     display: flex;
@@ -250,7 +251,7 @@ body {
     width: 90%;
     height: 80%;
     border-radius: 10px;
-    padding: 2% 0;
+    padding: 2.5% 5% 5% 5%;
     /* border: solid 0.05vw white;
     box-shadow: 0 2px 20px rgba(255, 255, 255, 0.719); */
     display: flex;
@@ -419,6 +420,7 @@ body {
     width: 90%;
     height: 100%;
     border-radius: 10px;
+    padding: 2.5% 3% 5% 3%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -439,7 +441,7 @@ body {
     background: var(--color-background);
     border-radius: 10px;
     cursor: pointer;
-    margin: 1.7%;
+    margin: 1.5%;
     width: 350px;
     height: 450px;
     display: flex;
