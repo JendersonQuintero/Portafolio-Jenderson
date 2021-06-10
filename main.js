@@ -1,5 +1,6 @@
 // CONSTANTES
-const btn_menu = document.querySelector('.btn-menu')
+const btn_menu = document.querySelector('.btn-menu');
+const btns_opcion = document.querySelectorAll('.btn-opcion');
 const formulario = document.querySelector('#formulario');
 const slider = document.querySelector('#slider');
 const inputs = document.querySelectorAll('#formulario input');
@@ -21,8 +22,15 @@ const validaciones = {
 
 // EVENTOS CON BOTONES
 btn_menu.addEventListener('click', () => {
-    const navbar_opciones = document.querySelector('.navbar-opciones')
-    navbar_opciones.classList.toggle('active')
+    const navbar_opciones = document.querySelector('.navbar-opciones');
+    navbar_opciones.classList.toggle('active');
+})
+
+btns_opcion.forEach((btn_opcion) => {
+    btn_opcion.addEventListener('click', () => {
+        const navegar = document.querySelector('.navbar-opciones');
+        navegar.classList.toggle('active');
+    })
 })
 
 formulario.addEventListener('submit', (e) => {
