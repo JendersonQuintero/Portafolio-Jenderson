@@ -728,12 +728,12 @@ footer {
     }
 
     .lista-habilidades span {
-        width: 55px;
+        width: 20%;
         height: 55px;
     }
 
     .lista-habilidades .barra-habilidad {
-        width: 200px;
+        width: 70%;
         height: 20px;
     }
 
@@ -743,7 +743,7 @@ footer {
     /* FIN DE HABILIDADES */
 }
 
-@media screen and (max-width: 952px) and (min-width: 700px) {
+@media screen and (max-width: 1024px) and (min-width: 800px) {
     .titulo {
         font-size: 35px;
         padding-bottom: 2px;
@@ -902,7 +902,7 @@ footer {
         height: 25px;
     }
 
-    .barra-habilidad .carga {
+    .lista-habilidades .barra-habilidad .carga {
         margin-top: -25px;
     }
 
