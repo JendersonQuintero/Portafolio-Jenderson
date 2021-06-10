@@ -20,39 +20,36 @@ const validaciones = {
 // FIN DE LAS CONSTANTES
 
 // EVENTOS CON BOTONES
-addEventListener('DOMContentLoaded', () => {
+btn_menu.addEventListener('click', () => {
+    const navbar_opciones = document.querySelector('.navbar-opciones')
+    navbar_opciones.classList.toggle('active')
+})
 
-    btn_menu.addEventListener('click', () => {
-         const navbar_opciones = document.querySelector('.navbar-opciones')
-         navbar_opciones.classList.toggle('active')
-    })
-
-    formulario.addEventListener('submit', (e) => {
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if(validaciones.nombre && validaciones.correo && validaciones.asunto && validaciones.mensaje) {
+        formulario.reset();
+        document.getElementById('nombre').classList.remove('valido');
+        document.getElementById('ico-nombre').classList.remove('fa-check');
+        document.getElementById('asunto').classList.remove('valido');
+        document.getElementById('ico-asunto').classList.remove('fa-check');
+        document.getElementById('correo').classList.remove('valido');
+        document.getElementById('ico-correo').classList.remove('fa-check');
+        document.getElementById('mensaje').classList.remove('valido');
+    } else {
         e.preventDefault();
-        if(validaciones.nombre && validaciones.correo && validaciones.asunto && validaciones.mensaje) {
-            formulario.reset();
-            document.getElementById('nombre').classList.remove('valido');
-            document.getElementById('ico-nombre').classList.remove('fa-check');
-            document.getElementById('asunto').classList.remove('valido');
-            document.getElementById('ico-asunto').classList.remove('fa-check');
-            document.getElementById('correo').classList.remove('valido');
-            document.getElementById('ico-correo').classList.remove('fa-check');
-            document.getElementById('mensaje').classList.remove('valido');
-        } else {
-            e.preventDefault();
-            Swal.fire({
-                icon: 'error',
-                iconColor: 'red',
-                title: '<h2 class="popup__title">Error en formulario</h2>',
-                titleColor: 'white',
-                html: '<h4 class="popup__text">Por favor verifique los datos ingresados</h4>',
-                background: 'rgb(48, 48, 48)',
-                confirmButtonColor: 'rgb(1, 165, 1)',
-                allowOutsideClick: false,
-                stopKeydownPropagation: false
-              });
-        }
-    })
+        Swal.fire({
+            icon: 'error',
+            iconColor: 'red',
+            title: '<h2 class="popup__title">Error en formulario</h2>',
+            titleColor: 'white',
+            html: '<h4 class="popup__text">Por favor verifique los datos ingresados</h4>',
+            background: 'rgb(48, 48, 48)',
+            confirmButtonColor: 'rgb(1, 165, 1)',
+            allowOutsideClick: false,
+            stopKeydownPropagation: false
+          });
+    }
 })
 
 // FIN EVENTOS CON BOTONES

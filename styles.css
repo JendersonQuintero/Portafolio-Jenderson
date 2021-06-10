@@ -117,7 +117,8 @@ body {
     position: fixed;
     left: 93%;
     cursor: pointer;
-    display: none;
+    display: block;
+    color: white;
 }
 /* -----------------FIN DEL NAVBAR------------------ */
 
@@ -186,7 +187,7 @@ body {
 /* -----------------INICIO DE SOBRE MI------------------ */
 #sobre-mi {
     margin-top: 2%;
-    height: 80vh;
+    height: 100%;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
@@ -407,7 +408,7 @@ body {
 
 /* -----------------INICIO DE MIS PROYECTOS------------------ */
 #proyectos {
-    height: 80vh;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -480,7 +481,7 @@ body {
 
 /* -----------------INICIO DE CONTACTAME------------------ */
 #contactame {
-    height: 60vh;
+    height: 100%;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
@@ -741,20 +742,27 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
+    .titulo {
+        font-size: 25px;
+        padding-bottom: 2px;
+        border-bottom: solid 2px var(--color-resaltado);
+    }
+
+    /* INICIO DEL NAVBAR */
+    #inicio {
+        margin-bottom: 4%;
+    }
+
     .navbar {
         position: fixed;
         z-index: 1;
-    }
-
-    .titulo {
-        font-size: 22px;
-        border-bottom: solid 2px aqua;
+        width: 100%;
     }
     
     .navbar-opciones {
         position: fixed;
         z-index: 1;
-        font-size: 25px;
+        font-size: 20px;
         width: 100%;
         height: 95vh;
         top: 7%;
@@ -777,27 +785,169 @@ footer {
     .navbar-opciones span {
         padding-right: 2vw;
     }
-    
+
+    .navbar .nombre {
+        display: block;
+        color: var(--color-titulo);
+        text-shadow: var(--sombra);
+    }
+
     .btn-menu {
-        display: none;
+        display: block;
         left: 90%;
         z-index: 1;
     }
-
+    /* FIN DEL NAVBAR */
+    
+    /* INICIO DEL HERO */
     .hero {
         flex-direction: column;
         justify-content: center;
+        height: 60vh;
     }
 
     .logo {
         text-align: center;
-        font-size: 15px;
-        width: 90%;
+        width: 100%;
+        height: 60vh;
         margin-bottom: 5vw;
     }
 
-    .mis-proyectos .proyecto {
-        width: 250px;
-        height: 150px;
+    .logo h1 {
+        font-size: 30px;
     }
+
+    .logo p {
+        font-size: 15px;
+    }
+
+    /* FIN DEL HERO  */
+
+    /* INICIO DE SOBRE MI */
+    #sobre-mi {
+        margin-bottom: 4%;
+    }
+
+    #sobre-mi .contenido {
+        width: 100%;
+        border-radius: 0;
+        padding: 4% 4% 12% 4%;
+    }
+
+    #sobre-mi .contenido .contenedor {
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #sobre-mi .contenido .contenedor .img-jenderson {
+        width: 300px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    #sobre-mi .contenido .contenedor .texto {
+        width: 90%;
+        font-size: 15px;
+        text-align: justify;
+    }
+    /* FIN DE SOBRE ME */
+
+    /* INICIO DE HABILIDADES */
+    #habilidades {
+        margin-bottom: 4%;
+    }
+
+    #habilidades .contenido {
+        width: 100%;
+        border-radius: 0;
+        padding: 4%;
+    }
+
+    #habilidades .contenido .mis-habilidades {
+        flex-direction: column;
+        width: 100%;
+        padding-inline: 2%;
+    }
+
+    .mis-habilidades .contenedor-lista {
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20%;
+
+    }
+
+    .contenedor-lista .lista-habilidades {
+        height: 100%;
+    }
+
+    .lista-habilidades li {
+        padding-inline: 2%;
+    }
+
+    .lista-habilidades li span {
+        width: 50px;
+        height: 50px;
+    }
+
+    .lista-habilidades .barra-habilidad {
+        width: 200px;
+        height: 20px;
+    }
+
+    .barra-habilidad .carga {
+        margin-top: -20px;
+    }
+
+    .mis-habilidades .contenedor-lista h2 {
+        font-size: 15px;
+        margin-bottom: 4%;
+    }
+    /* FIN DE HABILIDADES */
+
+    /* INICIO DE PROYECTOS */
+    #proyectos {
+        margin-bottom: 4%;
+    }
+
+    #proyectos .contenido {
+        width: 100%;
+        border-radius: 0;
+        padding: 4%;
+    }
+
+    #proyectos .contenido .mis-proyectos {
+        flex-direction: column;
+    }
+
+    .mis-proyectos .proyecto {
+        width: 300px;
+        height: 300px;
+    }
+    /* FIN DE PROYECTOS */
+
+    /* INICIO DE CONTACTAME */
+    #contactame .contenido {
+        width: 100%;
+        border-radius: 0;
+        padding: 4%;
+    }
+
+    #contactame .contenido .contenedor {
+        flex-direction: column;
+    }
+    /* FIN DE CONTACTAME */
+    
+    /* INICIO DEL FOOTER */
+    footer p {
+        font-size: 10px;
+    }
+
+    footer span {
+        font-size: 10px;
+    }
+    /* FIN DEL FOOTER */
+
+
 }
