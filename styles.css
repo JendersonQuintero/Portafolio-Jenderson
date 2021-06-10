@@ -43,12 +43,12 @@ body {
     margin-bottom: 4vh;
 }
 
-.popup__title {
+.popup__titulo {
     color: var(--color-titulo);
     font-size: 2vw;
 }
 
-.popup__text {
+.popup__texto {
     color: var(--color-parrafos);
     font-size: 0.9vw;
 }
@@ -117,7 +117,7 @@ body {
     position: fixed;
     left: 93%;
     cursor: pointer;
-    display: block;
+    display: none;
     color: white;
 }
 /* -----------------FIN DEL NAVBAR------------------ */
@@ -699,15 +699,36 @@ footer {
 }
 
 @media screen and (max-width: 952px) and (min-width: 700px) {
+    .titulo {
+        font-size: 35px;
+        padding-bottom: 2px;
+        border-bottom: solid 3px var(--color-resaltado);
+    }
+
+    .popup__titulo {
+        font-size: 35px;
+        color: var(--color-titulo);
+    }
+
+    .popup__texto {
+        font-size: 20px;
+        color: var(--color-parrafos);
+    }
+
+    /* INICIO DEL NAVBAR */
+    #inicio {
+        margin-bottom: 4%;
+    }
+
     .navbar {
         position: fixed;
         z-index: 1;
     }
-
+    
     .navbar-opciones {
         position: fixed;
         z-index: 1;
-        font-size: 25px;
+        font-size: 35px;
         width: 100%;
         height: 95vh;
         top: 7%;
@@ -724,20 +745,225 @@ footer {
     }
 
     .navbar-opciones li {
-        margin-bottom: 7vh;
-        padding-bottom: 1vh;
+        margin-bottom: 10vh;
     }
 
     .navbar-opciones span {
         padding-right: 2vw;
     }
-    
+
     .btn-menu {
         display: block;
+        left: 50%;
+        font-size: 25px;
         z-index: 1;
-        left: 90%;
+    }
+    /* FIN DEL NAVBAR */
+    
+    /* INICIO DEL HERO */
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        height: 60vh;
+    }
+
+    .logo {
+        text-align: center;
+        width: 100%;
+        height: 60vh;
+        margin-bottom: 5vw;
+    }
+
+    .logo h1 {
+        font-size: 65px;
+    }
+
+    .logo p {
         font-size: 25px;
     }
+
+    /* FIN DEL HERO  */
+
+    /* INICIO DE SOBRE MI */
+    #sobre-mi {
+        margin-bottom: 4%;
+    }
+
+    #sobre-mi .contenido {
+        width: 100%;
+        border-radius: 0;
+        padding: 4% 4% 12% 4%;
+    }
+
+    #sobre-mi .contenido .contenedor {
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #sobre-mi .contenido .contenedor .img-jenderson {
+        width: 400px;
+        height: 350px;
+        margin-bottom: 20px;
+    }
+
+    #sobre-mi .contenido .contenedor .texto {
+        width: 90%;
+        font-size: 20px;
+        text-align: justify;
+    }
+    /* FIN DE SOBRE ME */
+
+    /* INICIO DE HABILIDADES */
+    #habilidades {
+        margin-bottom: 4%;
+    }
+
+    #habilidades .contenido {
+        width: 100%;
+        border-radius: 0;
+        padding: 4% 4% 0 4%;
+    }
+
+    #habilidades .contenido .mis-habilidades {
+        flex-direction: column;
+        width: 100%;
+        padding-inline: 2%;
+    }
+
+    .mis-habilidades .contenedor-lista {
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 15%;
+
+    }
+
+    .contenedor-lista .lista-habilidades {
+        height: 100%;
+    }
+
+    .lista-habilidades li {
+        padding-inline: 2%;
+    }
+
+    .lista-habilidades li span {
+        width: 85px;
+        height: 85px;
+    }
+
+    .lista-habilidades .barra-habilidad {
+        width: 350px;
+        height: 25px;
+    }
+
+    .barra-habilidad .carga {
+        margin-top: -25px;
+    }
+
+    .mis-habilidades .contenedor-lista h2 {
+        font-size: 22px;
+        margin-bottom: 4%;
+    }
+    /* FIN DE HABILIDADES */
+
+    /* INICIO DE PROYECTOS */
+    #proyectos {
+        margin-bottom: 4%;
+    }
+
+    #proyectos .contenido {
+        width: 100%;
+        border-radius: 0;
+        padding: 4% 4% 0 4%;
+    }
+
+    #proyectos .contenido .mis-proyectos {
+        flex-direction: column;
+    }
+
+    .mis-proyectos .proyecto {
+        width: 500px;
+        height: 650px;
+        margin-bottom: 60px;
+    }
+
+    .mis-proyectos .proyecto .informacion p {
+        font-size: 25px;
+    }
+    /* FIN DE PROYECTOS */
+
+    /* INICIO DE CONTACTAME */
+    #contactame .contenido {
+        width: 100%;
+        border-radius: 0;
+        padding: 4%;
+    }
+
+    #contactame .contenido .contenedor {
+        flex-direction: column;
+    }
+
+    #contactame .formulario {
+        width: 100%;
+    }
+
+    #contactame .formulario .valido {
+        border: solid 2.5px var(--color-resaltado);
+    }
+
+    #contactame .formulario .invalido {
+        border: solid 2.5px red;
+    }
+
+    #contactame .formulario .input-ico {
+        width: 90%;
+    }
+
+    #contactame .formulario textarea {
+        width: 90%;
+        height: 15vh;
+        margin-bottom: 15px;
+        padding: 4px 0 0 8px;
+        font-size: 14px;
+    }
+
+    #contactame .contenido .contenedor .datos-contacto {
+        width: 100%;
+        padding: 30px 25px 10px 25px;
+    }
+
+    .datos-contacto .info {
+        margin-bottom: 15px;
+    }
+
+    .datos-contacto h3 {
+        margin-bottom: 10px;
+    }
+
+    .datos-contacto p {
+        padding-left: 40px;
+    }
+
+    .datos-contacto .redes .iconos {
+        width: 100%;
+    }
+
+    /* FIN DE CONTACTAME */
+    
+    /* INICIO DEL FOOTER */
+    footer {
+        padding-inline: 10px;
+    }
+    footer p {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    footer span {
+        font-size: 10px;
+    }
+    /* FIN DEL FOOTER */
 
 }
 
@@ -748,6 +974,16 @@ footer {
         border-bottom: solid 2px var(--color-resaltado);
     }
 
+    .popup__titulo {
+        font-size: 25px;
+        color: var(--color-titulo);
+    }
+
+    .popup__texto {
+        font-size: 13px;
+        color: var(--color-parrafos);
+    }
+
     /* INICIO DEL NAVBAR */
     #inicio {
         margin-bottom: 4%;
@@ -756,7 +992,6 @@ footer {
     .navbar {
         position: fixed;
         z-index: 1;
-        width: 100%;
     }
     
     .navbar-opciones {
@@ -786,15 +1021,10 @@ footer {
         padding-right: 2vw;
     }
 
-    .navbar .nombre {
-        display: block;
-        color: var(--color-titulo);
-        text-shadow: var(--sombra);
-    }
-
     .btn-menu {
         display: block;
-        left: 90%;
+        font-size: 20px;
+        left: 50%;
         z-index: 1;
     }
     /* FIN DEL NAVBAR */
@@ -914,7 +1144,7 @@ footer {
     #proyectos .contenido {
         width: 100%;
         border-radius: 0;
-        padding: 4%;
+        padding: 4% 4% 0 4%;
     }
 
     #proyectos .contenido .mis-proyectos {
@@ -923,7 +1153,8 @@ footer {
 
     .mis-proyectos .proyecto {
         width: 300px;
-        height: 300px;
+        height: 450px;
+        margin-bottom: 60px;
     }
     /* FIN DE PROYECTOS */
 
@@ -937,11 +1168,61 @@ footer {
     #contactame .contenido .contenedor {
         flex-direction: column;
     }
+
+    #contactame .formulario {
+        width: 100%;
+    }
+
+    #contactame .formulario .valido {
+        border: solid 2.5px var(--color-resaltado);
+    }
+
+    #contactame .formulario .invalido {
+        border: solid 2.5px red;
+    }
+
+    #contactame .formulario .input-ico {
+        width: 90%;
+    }
+
+    #contactame .formulario textarea {
+        width: 90%;
+        height: 15vh;
+        margin-bottom: 15px;
+        padding: 4px 0 0 8px;
+        font-size: 14px;
+    }
+
+    #contactame .contenido .contenedor .datos-contacto {
+        width: 100%;
+        padding: 30px 25px 10px 25px;
+    }
+
+    .datos-contacto .info {
+        margin-bottom: 15px;
+    }
+
+    .datos-contacto h3 {
+        margin-bottom: 10px;
+    }
+
+    .datos-contacto p {
+        padding-left: 40px;
+    }
+
+    .datos-contacto .redes .iconos {
+        width: 100%;
+    }
+
     /* FIN DE CONTACTAME */
     
     /* INICIO DEL FOOTER */
+    footer {
+        padding-inline: 10px;
+    }
     footer p {
         font-size: 10px;
+        text-align: center;
     }
 
     footer span {

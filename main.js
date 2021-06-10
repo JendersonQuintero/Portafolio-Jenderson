@@ -41,9 +41,9 @@ formulario.addEventListener('submit', (e) => {
         Swal.fire({
             icon: 'error',
             iconColor: 'red',
-            title: '<h2 class="popup__title">Error en formulario</h2>',
+            title: '<h2 class="popup__titulo">Error en formulario</h2>',
             titleColor: 'white',
-            html: '<h4 class="popup__text">Por favor verifique los datos ingresados</h4>',
+            html: '<h4 class="popup__texto">Por favor verifique los datos ingresados</h4>',
             background: 'rgb(48, 48, 48)',
             confirmButtonColor: 'rgb(1, 165, 1)',
             allowOutsideClick: false,
