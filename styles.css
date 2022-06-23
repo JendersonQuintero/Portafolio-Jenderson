@@ -555,16 +555,33 @@ body {
     padding-left: 4%;
 }
 
-.datos-contacto .redes .icono {
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: var(--sombra);
+.datos-contacto .redes .iconos .icono {
+    transition: ease .5s;
 }
 
-.datos-contacto .redes .icono:hover {
-    box-shadow: var(--sombra-hover);
+.datos-contacto .redes .iconos .icono:hover {
+    transform: scale(1.07);
+}
+
+
+
+.datos-contacto .redes .facebook,
+.datos-contacto .redes .instagram {
+    width: 63px;
+    height: 63px;
+    cursor: pointer;
+}
+
+.datos-contacto .redes .github {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.datos-contacto .redes .linkedin {
+    width: 49px;
+    height: 49px;
+    cursor: pointer;
 }
 
 .datos-contacto .redes img {
