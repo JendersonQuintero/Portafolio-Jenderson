@@ -1,0 +1,23 @@
+/* -----------------INICIO DEL FOOTER------------------ */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: var(--color-contenido);
+    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.719);
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 7vh;
+}
+
+.subir {
+    color: white;
+}
+
+.subir:hover {
+    cursor: pointer;
+    color: var(--color-resaltado);
+    transform: scale(1.2);
+}
+/* -----------------FIN DEL FOOTER------------------ */
