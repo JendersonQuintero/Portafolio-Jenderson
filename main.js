@@ -133,5 +133,4 @@ inputs.forEach((input) => {
 textarea.addEventListener('keyup', validarFormulario);
 textarea.addEventListener('blur', validarFormulario);
 
-
 // FIN VALIDACIONES DEL FORMULARIO
