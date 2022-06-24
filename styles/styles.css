@@ -1,7 +1,8 @@
 :root {
     --color-contenido: #1b1b1b;
     --color-background: rgb(48, 48, 48);
-    --color-resaltado: rgb(1, 165, 1);
+    --color-resaltado: rgb(52, 43, 227, 89);
+    --color-resaltado-hover: rgb(60, 101, 250, 98);
     --color-titulo: white;
     --color-parrafos: white;
     --sombra: 0 2px 15px rgba(255, 255, 255, 0.719);
@@ -36,7 +37,7 @@ body {
 }
 
 .titulo {
-    font-size: 2.2vw;
+    font-size: 2.5vw;
     color: var(--color-titulo);
     border-bottom: solid 0.3vw var(--color-resaltado);
     padding-inline: 0.8%;
