@@ -14,8 +14,6 @@
     height: 80%;
     border-radius: 10px;
     padding: 2.5% 5% 5% 5%;
-    /* border: solid 0.05vw white;
-    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.719); */
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -33,14 +31,17 @@
 }
 
 #sobre-mi .contenido .contenedor .img-jenderson {
-    width: 400px;
-    height:  500px;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px;
+    overflow: hidden;
 }
 
 .img-jenderson img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 #sobre-mi .contenido .contenedor .texto {
